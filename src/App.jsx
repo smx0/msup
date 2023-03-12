@@ -13,7 +13,7 @@ import ErrorPage from './components/ErrorPage'
 import { Toaster } from 'react-hot-toast'
 import { Flubber } from './contexts/Auth'
 
-
+// edited the app names
 // all the elements that you want to have access to 'context', should be enclosed in varname.Provider tags. 
 // now any enclosed cpn will have access to the value above
 export default function App() {
