@@ -4,11 +4,6 @@
 
 style search bar: big search box, plus text
 3 filters: ALL, CORE, ELECTIVES
-PROJECT URL
-'https://ivdkbtfxpwfusinunqgn.supabase.co'
-PROJECT API KEY
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2ZGtidGZ4cHdmdXNpbnVucWduIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzc4ODUyOTcsImV4cCI6MTk5MzQ2MTI5N30.yg4TrrSwagWJ9i9s2DB8m4Q-39r8Fi6BQVV9W0-ozjw
-
 
 ## etc
 
@@ -40,7 +35,7 @@ next section shows same topic in other classes
 ====|| IP       ||====
 
 - check if gitignore actually works
-
+- remove user id from LOGIN page. 
 
 // if we have tons of users..
 - default sort resCards by 'likes' and 'comments' by newest

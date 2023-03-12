@@ -129,7 +129,7 @@ export default function LoginPage() {
     <div>
       <div className='login-bottom'>
 
-<div style={{ color: 'white' }}>{llama.user?.id }</div>
+<div style={{ color: 'white' }}>'hello logged in user'</div>
 <button
   onClick={() => toastThemeTest()}>
   toast test</button>
