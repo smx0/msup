@@ -1,0 +1,60 @@
+toast.success('Look at my styles.', {
+  style: {
+    border: '1px solid #713200',
+    padding: '16px',
+    color: '#713200',
+  },
+  iconTheme: {
+    primary: '#713200',
+    secondary: '#FFFAEE',
+  },
+});
+
+           {
+              llama.user &&
+            <div className='app-fav'>
+                <p className='sectionName'>fav</p>
+                {favCoursesCpn.length > 0 ? 
+                 favCoursesCpn : 
+                
+                <p className='app-fave-nothing'>
+                    ( •_•)σ hit the red star to the right of a class name to pin it here
+                </p>
+
+                 }
+
+            </div>
+            }
+
+            
+
+name: 
+give your resource a brief, descriptive title. 
+something like 'notes on direct proof' or 'java access modifiers'. 
+
+
+course: 
+which course did you use this for? 
+
+from: 
+where is this resource from? 
+example: TrevTutor, Khan Academy, Oracle Java Docs, free code camp, University of StateName CS lectures...
+
+topics:
+the topics covered 
+you want people to be able to find this resource  based on the topics you provide
+if there are multiple topics covered, separate them with commas. 
+(example:) induction, csv parsing, pointers, expectation, functional programming
+
+type: 
+which category best fits? 
+video, webpage, textbook
+
+location: 
+this is just the URL on the web. 
+Of course, don't add anything illegal or against uni policy, etc.
+If it's a paid course or text, maybe just put a link to the product page. 
+
+bgc  background color
+m:a  margin: auto
+c    color#
