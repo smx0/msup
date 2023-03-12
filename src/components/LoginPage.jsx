@@ -68,7 +68,8 @@ export default function LoginPage() {
                       // localStorage.setItem('does this work?', 'true')
                   }  else {
                     // if we don't have value.data.user
-                    console.error('no v.d.u',value) }
+                    // console.error('no v.d.u', value)
+                  }
                   
               })
       }
