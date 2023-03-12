@@ -59,7 +59,9 @@ export default function LoginPage() {
                   if (value.data?.user) {
                       // console.log('\tfound v.d.u:')
                       // console.log(value.data.user)
-                      redirectTo:window.location.origin
+                    
+                      console.log('wlv is',window.location.origin)
+                      // redirectTo:window.location.origin
                       
                       llama.setUser(value.data.user); 
                       // toast(" ran get user data", {
