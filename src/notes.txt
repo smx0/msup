@@ -93,33 +93,6 @@ PUBLICITY//
 - supabase/ postgres 
 - made in react.js
 
-```//  
-  let dataSearch = CoursesArray.filter( item => {
-      return Object.keys(item).some(key => 
-        item[key].toString().toLowerCase().includes(filterValue.toString().toLowerCase()))
-  })
-
-  function test() {
-    console.log("in fv is "+filterValue)
-    console.log("in hc, state # of objs is "+(courses.length))
-
-    const fltData = (CoursesArray.filter(item => item.courseID > 5150))
-    // console.log("fltdata # items is "+fltData.length)
-
-    setCourses(CoursesArray.filter(item => 
-      item.courseName.toLowerCase().includes(filterValueParsed)))
-    // console.log("after filter, # of courses is "+(courses.length))
-
-
-    // let dataSearch = CoursesArray.filter( item => {
-    //     return Object.keys(item).some(key => 
-    //       item[key].toString().toLowerCase().includes(fvp))
-    // })
-  }
-  ```
-
-
-
 
 async function getLikes() {
             const res = await supabase

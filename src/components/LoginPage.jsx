@@ -60,8 +60,9 @@ export default function LoginPage() {
                       // console.log('\tfound v.d.u:')
                       // console.log(value.data.user)
                     
+                      console.log('hi',PROJECT_URL, PROJECT_API_KEY)
                       console.log('wlv is',window.location.origin)
-                      // redirectTo:window.location.origin
+                      redirectTo:window.location.origin
                       
                       llama.setUser(value.data.user); 
                       // toast(" ran get user data", {
@@ -133,7 +134,7 @@ export default function LoginPage() {
     <div>
       <div className='login-bottom'>
 
-<div style={{ color: 'white' }}>'hello logged in user'</div>
+{/* <div style={{ color: 'white' }}>'hello logged in user'</div> */}
 <button
   onClick={() => toastThemeTest()}>
   toast test</button>
