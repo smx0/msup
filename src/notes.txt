@@ -1,0 +1,106 @@
+# main page
+
+## search
+
+style search bar: big search box, plus text
+3 filters: ALL, CORE, ELECTIVES
+
+## etc
+
+- app name: msup.io
+
+- style search boxes and add filter buttons
+- filter | search // all / elec / core
+
+
+- commentbox has timestamp, automatically sort by newest
+- check comment modal for long text name
+  - tooltips for long titles
+- topics need to have their own table that has a count value, needs to be incremented when clicked!
+- on about page, email link should be copiable!
+- link to github instead of email
+- make sure res-card reloads after submitting comment, also make sure to clear comment box after submission!
+
+
+## CoursePage
+
+banner image: 4 blocks: 1 is square image, 2-3 is:
+top half is title (med size) bottom half is class name (small size)
+first section shows for this class
+next section shows same topic in other classes
+
+## resource comp
+
+
+====|| IP       ||====
+
+- check if gitignore actually works
+- remove user id from LOGIN page. 
+
+// if we have tons of users..
+- default sort resCards by 'likes' and 'comments' by newest
+  - check sql query
+- add repair button functionality
+  - 'fix' link goes to github
+- then try adding comments/resources/liking favs
+
+- put counts on tags!: sort by asc/desc, or alphya, or search
+- ck for auth token in browser local hx instead of state
+- statistics page: class with most resources, most topics, rankings, etc, most frequse tag 
+  - create a new table, each is entered, and set a count 
+  - when clicked, the tag count is incremented 
+- card previews w/framer motion 
+  - only show first comment by default, click to see all of them.
+
+//later
+- see this topic in other classes (click to query)
+ - (wait for more info)
+
+
+if (res.data?.btn_status) {
+  if btn_status does not exist (b/c the row does not exist)
+  you will skip getting an undefined error
+
+
+====|| FINISHED ||====
+- adding new resources 
+- adding courses to favs, stored in DB
+
+
+
+====|| NOPE      ||====
+- make 'all courses' into smaller box
+- put form title on separate 
+- type box should be big buttons?
+- change core vs elective color
+- btn show results of all current tags at once
+- this week's hot resources!, also resource leaderboard, which course had the most clicks?
+- resource numbers next to course page on course page 
+- code snippets format
+- make coursebar courses keyboard navigateable
+- add question section, and export to anki!
+- thanks section: sc consulting, bz inspiration, yt 50+h
+- leetcode section!
+- number of resources on coursebar
+
+
+
+PUBLICITY//
+-used custom hooks
+- js/sql queries 
+- managed like system 
+- user auth 
+- supabase/ postgres 
+- made in react.js
+
+
+async function getLikes() {
+            const res = await supabase
+                .from('likedRes')
+                .select()
+                .eq('from_user', llama.user.id)
+            console.log('likes are', res.data)
+            const testMe = []
+            res.data.forEach( row => testMe.push( { id: row.id, btn_status: row.btn_status }))
+            console.log('final',testMe)
+            setLikesArray( testMe)
