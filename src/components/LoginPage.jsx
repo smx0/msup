@@ -135,10 +135,8 @@ export default function LoginPage() {
       <div className='login-bottom'>
 
 {/* <div style={{ color: 'white' }}>'hello logged in user'</div> */}
-<button
-  onClick={() => toastThemeTest()}>
-  toast test</button>
-</div>
+{/* <button onClick={() => toastThemeTest()}> */}
+  {/* toast test</button> </div> */}
       { loadingAnim ? 
         
         <div className='login-scaleholder'>
