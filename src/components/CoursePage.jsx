@@ -8,15 +8,6 @@ import TestModal from './TestModal'
 import toast, { Toaster } from 'react-hot-toast'
 import { brad } from '../contexts/Auth'
 
-// TODO 
-// take array put each element in a set 
-// use set to make a list of tags on RIGHT sidebar
-// overflow is scroll w/in box 
-// search box above tag list 
-// make 'card' cpn for each 
-// if id is not courseId, go redirect to Home Page!
-// ...or... invalid DI
-
 export default function CoursePage() {
 
   // gets id from browser URL
@@ -61,7 +52,7 @@ export default function CoursePage() {
   React.useEffect(() => {
 
     // dl 
-    console.log("quering w/"+classID)
+    // console.log("quering w/"+classID)
 
     // this is just the def 
     async function getDataJSON() {
@@ -354,10 +345,10 @@ export default function CoursePage() {
     <div>
 
       < Toaster />
-      <div className='course-page-heading'>
-        <div className='course-page-heading-id'>{classID}</div>
-        <div className='course-page-heading-name'>{courseName}</div>
-      </div>
+      {/* <div className='course-page-heading'> */}
+        {/* <div className='course-page-heading-id'>{classID}</div> */}
+        {/* <div className='course-page-heading-name'>{courseName}</div> */}
+      {/* </div> */}
 
       <h1><TestModal
         info={toggleCommentModalState}

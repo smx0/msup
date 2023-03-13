@@ -49,14 +49,14 @@ export default function TagBar(props) {
     return (
      <div className='tagbox'>
             <div className='tagbox-icon-and-search'>
-            <div className='fasearch-ctn'>
+            <div className='fasearch-ctn2'>
                     < FontAwesomeIcon  icon={faSearch} color='white' /></div>
             <div className='tagbox-search-container'>
                 <input
                     autoFocus
                     className='tagbox-search'
                     type="text"
-                    placeholder='search topics'
+                    placeholder='search topics...'
                     value={tagFilterValue}
                     onChange={() => handleChangeSearchBox(event)} 
                     />

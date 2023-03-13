@@ -1,11 +1,26 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBookOpen, faHouse } from "@fortawesome/free-solid-svg-icons"
-import { useNavigate } from "react-router-dom"
+import CourseData from "./CourseData";
+import { useLocation } from "react-router-dom";
 
 export default function Header() {
 
-    const navigate = useNavigate()
+    let courseIDfromURL = ''
+    let courseName = ''
+
+    const useLocInfo = useLocation()
+    // console.log('ul', useLocInfo.pathname)
+    const urlLastFourDigits = /\d{4}$/
+    // console.log(urlLastFourDigits.exec(useLocInfo.pathname))
+    const atCoursePage = urlLastFourDigits.test(useLocInfo.pathname)
+    if (atCoursePage) {
+        courseIDfromURL = urlLastFourDigits.exec(useLocInfo.pathname)
+        courseName = CourseData.find( elm => elm.courseID == courseIDfromURL).courseName
+        console.log('cn is',courseName)
+    } else {
+        // console.log('somewhere else!!')
+    }
 
     return (
         <div className="header">
@@ -13,15 +28,27 @@ export default function Header() {
                 <span style={{ color: 'red' }}>m</span>
                 <span style={{ textDecoration: 'underline dotted red' }}>
                     sup</span> /</p>
+            
+            {
+                atCoursePage ? 
+                    
+                    <div className="course-header"> 
+                        <div className="courseID">{courseIDfromURL} </div>
+                        <div className="courseName">{courseName}</div>
+                    </div>
+                    
+                :
+                    
             <p className="header-body">
-                <span style={{ textDecoration: 'underline dotted red' }}>
-                    sup</span>plemental resources for
-                <span style={{ color: 'red' }}> m</span>cito</p>
-            <FontAwesomeIcon
-                className="header-home-icon"
-                icon={faBookOpen}
-                onClick={ () => navigate('/home')}
-                style={{ color: 'white', cursor: 'pointer' }} />
+                <span className="header-sup">
+                            sup</span>
+                        <span className="header-other">plemental resources for</span>
+
+                        <span className="header-m"> m</span>
+                        <span className="header-other">cito {courseIDfromURL}</span> </p>
+
+            }
+
         </div>
 
     )
