@@ -26,6 +26,7 @@ body {
 
 .login-container {
   display: flex;
+  flex-direction: row-reverse;
   /* border: 1px green solid; */
   margin: 100px auto;
   justify-content: center;
@@ -70,7 +71,7 @@ body {
 
 .loginHelp {
   color: white;
-  /* border-left: 1px white solid; */
+  border-right: 1px white solid;
   border-radius: 3px;
   /* padding: 10px; */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -91,12 +92,13 @@ body {
   list-style-type:none ;
 }
 
+/* everything under the footer? */
 .login-bottom {
   display: flex;
-  flex-direction: column;
-  width: 200px;
-  margin: 0px auto;
-  background-color: red;
+  /* flex-direction: column; */
+  /* width: 200px; */
+  /* margin: 0px auto; */
+  /* background-color: red; */
 }
 
 .login-logout-btn {

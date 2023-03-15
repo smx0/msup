@@ -131,7 +131,7 @@ export default function LoginPage() {
 
   return (
 
-    <div>
+    // <div>
       <div className='login-bottom'>
 
 {/* <div style={{ color: 'white' }}>'hello logged in user'</div> */}
