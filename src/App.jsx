@@ -35,7 +35,7 @@ export default function App() {
         <Route path='/login' element={<LoginPage />} />
         <Route path='/addresource' element={<AddResource />} />
         <Route path='/:id' element={<CoursePage />} />
-        <Route path='/' element={<LoginPage />} />
+        <Route path='/' element={<Home />} />
         {/* <Route path='/' element={<CoursePage />} /> */}
       </Routes>
       </Flubber>
