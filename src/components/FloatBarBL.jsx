@@ -15,14 +15,13 @@ export default function FloatBarBL() {
 
 
   return (
-    <div className='floarbarbl'>
+    <div className='floatbarbl'>
 
         <div className='floatbar-btn'
-            onClick={ () => navigate('/home')}>
+              onClick={() => navigate('/home')}>
             <FontAwesomeIcon 
-            // icon={faSpinner}
             icon={faBookOpen}
-            />
+              />
         </div>
         { llama.user &&
         <div className='floatbar-btn'

@@ -17,7 +17,7 @@ export default function Header() {
     if (atCoursePage) {
         courseIDfromURL = urlLastFourDigits.exec(useLocInfo.pathname)
         courseName = CourseData.find( elm => elm.courseID == courseIDfromURL).courseName
-        console.log('cn is',courseName)
+        // console.log('cn is',courseName)
     } else {
         // console.log('somewhere else!!')
     }
