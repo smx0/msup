@@ -19,16 +19,20 @@ export default function FloatBarBL() {
 
         <div className='floatbar-btn'
               onClick={() => navigate('/home')}>
-            <FontAwesomeIcon 
+          <FontAwesomeIcon 
             icon={faBookOpen}
-              />
+            />
+            <span className='floatbar-tooltip'>courses</span>
         </div>
-        { llama.user &&
+      
+
+        {llama.user &&
         <div className='floatbar-btn'
             onClick={ () => navigate('/addresource')}>
             <FontAwesomeIcon 
             icon={faPlusCircle}
-            />
+          />
+            <span className='floatbar-tooltip'>add</span>
         </div>
         }
         
@@ -37,6 +41,7 @@ export default function FloatBarBL() {
             <FontAwesomeIcon 
             icon={faInfoCircle}
             />
+            <span className='floatbar-tooltip'>info</span>
         </div>
         
 
@@ -45,6 +50,7 @@ export default function FloatBarBL() {
             <FontAwesomeIcon 
             icon={faRightFromBracket}
             />
+            <span className='floatbar-tooltip'>login</span>
         </div>
 
         <div >

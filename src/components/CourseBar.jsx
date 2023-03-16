@@ -25,7 +25,7 @@ export default function CourseBar(props) {
                 .select('*', {count: 'estimated', head: true})
                 .eq('courseID', props.courseID)
             setTotalResourceCount(res.count)   
-            console.log(res)
+            // console.log(res)
          }
     
         getCount();

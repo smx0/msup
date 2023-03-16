@@ -56,13 +56,13 @@ export default function LoginPage() {
                   // but in case it that info bundle doesn't exist
                   // the q mark means, if value.data is undefnied, don't try to get the user
                   // this way, you can avoid getting an undefined error 
+
                   if (value.data?.user) {
                       // console.log('\tfound v.d.u:')
                       // console.log(value.data.user)
                     
-                      console.log('hi',PROJECT_URL, PROJECT_API_KEY)
-                      console.log('wlv is',window.location.origin)
-                      redirectTo:window.location.origin
+                      // console.log('hi',PROJECT_URL, PROJECT_API_KEY)
+                      // console.log('wlv is',window.location.origin)
                       
                       llama.setUser(value.data.user); 
                       // toast(" ran get user data", {
@@ -134,9 +134,6 @@ export default function LoginPage() {
     // <div>
       <div className='login-bottom'>
 
-{/* <div style={{ color: 'white' }}>'hello logged in user'</div> */}
-{/* <button onClick={() => toastThemeTest()}> */}
-  {/* toast test</button> </div> */}
       { loadingAnim ? 
         
         <div className='login-scaleholder'>
@@ -176,7 +173,8 @@ export default function LoginPage() {
               theme="dark"
 
               // contains every authoraized provider
-              providers={['google']}
+                providers={['google']}
+                redirectTo= 'http://localhost:5180/login'
             />
           </div>
 

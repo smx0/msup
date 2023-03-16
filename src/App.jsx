@@ -36,11 +36,9 @@ export default function App() {
         <Route path='/addresource' element={<AddResource />} />
         <Route path='/:id' element={<CoursePage />} />
         <Route path='/' element={<Home />} />
-        {/* <Route path='/' element={<CoursePage />} /> */}
       </Routes>
       </Flubber>
     </div>
   )
 }
 
-// element={<CoursePage key={item.id} {...item} />}

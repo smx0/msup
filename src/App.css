@@ -280,7 +280,7 @@ body {
   /* font-size: 2.5vw; */
   margin-top: 10px;
   /* animation duration, ease-style, delay until start, # of repeats, which? */
-  /* animation: 1s linear 0s 1 fadeincn; */
+  animation: 1s linear 0s 1 fadeincn;
   overflow: hidden;
 }
 
@@ -322,8 +322,11 @@ body {
   /* width: 60px; */
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   opacity: .5;
   transition: 0.3s;
+
+  /* border: 1px red solid; */
 }
 
 .floarbatbl:hover {
@@ -335,13 +338,16 @@ body {
   color: rgba(255, 255, 255, 0.438);
   width: 50px;
   height: 50px;
-  display: flex;
-  /* flex-direction: column; */
-  justify-content: center;
-  align-items: center;
   font-size: 25px;
   transition: 0.1s ;
+  
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  /* align-items: center; */
   /* height: fit-content; */
+  /* border: 1px green solid; */
 }
 
 .floatbar-btn:hover {
@@ -350,6 +356,29 @@ body {
   /* font-size: 30px; */
 
 }
+
+
+.floatbar-tooltip {
+  color: rgb(255, 255, 255);
+  margin-left: 60px;
+  /* border: 1px yellow solid; */
+  position: absolute;
+  display: none;
+  font-size: 17px;
+  background-color: rgba(0, 0, 0, 0.493);
+  border-radius: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: fit-content;
+  /* opacity: .5; */
+  cursor:default;
+  transition-duration: 0.3s;
+}
+
+.floatbar-btn:hover .floatbar-tooltip{
+  display: block;
+  opacity: 1;
+}
+
 
 
 .app-body {
