@@ -18,6 +18,8 @@ export default function CourseBar(props) {
     // sent to CourseBar cpns 
     const navigate = useNavigate()
 
+
+
     React.useEffect(() => {
         async function getCount() {
             const res = await supabase
@@ -30,6 +32,8 @@ export default function CourseBar(props) {
     
         getCount();
     }, [])
+
+
     
     const resCountOpacity = totalResourceCount > 0 ? {opacity: 1} : {opacity: 0.1}
 

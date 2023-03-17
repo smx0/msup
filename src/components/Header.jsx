@@ -5,7 +5,7 @@ import CourseData from "./CourseData";
 import { useLocation } from "react-router-dom";
 
 export default function Header() {
-
+    
     let courseIDfromURL = ''
     let courseName = ''
 

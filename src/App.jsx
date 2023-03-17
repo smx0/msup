@@ -5,11 +5,9 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
 import CoursePage from './components/CoursePage'
 import LoginPage from './components/LoginPage'
-import LoginSuccess from './components/LoginSuccess'
 import FloatBarBL from './components/FloatBarBL'
 import AddResource from './components/AddResource'
 import About from './components/About'
-import ErrorPage from './components/ErrorPage'
 import { Toaster } from 'react-hot-toast'
 import { Flubber } from './contexts/Auth'
 
@@ -29,7 +27,6 @@ export default function App() {
       <FloatBarBL />
       <Toaster />
       <Routes>
-        <Route path='/success' element={<LoginSuccess />} />
         <Route path='/home' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/login' element={<LoginPage />} />

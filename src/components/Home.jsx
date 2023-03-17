@@ -158,7 +158,7 @@ export default function Home() {
     return (
     <div>
         <Toaster />
-        <div className='app-body'>
+        <div className='app-body' >
 
             { llama.user && 
             <div className='app-fav'>
@@ -193,7 +193,6 @@ export default function Home() {
                     placeholder='search classes...'
                     value={filterValue}
                     onChange={() => handleChangeSearchBox(event)}/>
-
             </div> 
             </div>
 

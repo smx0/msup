@@ -138,20 +138,27 @@ body {
   width: fit-content;
 }
 
+.aboutText-content {
+  margin-left: 50px;
+  animation: .8s linear 0s 1 fadein;
+}
+
+.aboutText-spacer {
+  height: 50px;
+}
 .warn {
+  animation: .8s linear 0s 1 fadein;
   color: rgb(250, 117, 117);
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  background-color: #58caff;
+  /* -moz-border-radius: 6px; */
+  /* -webkit-border-radius: 6px; */
+  /* background-color: #58caff; */
   background-color: #e76d6d69;
-  /* background-image: url(../Images/icons/Pencil-48.png); */
-  /* background-position: 9px 0px; */
-  /* background-repeat: no-repeat; */
   border: solid 1px #ff3030;
   border-radius: 6px;
   line-height: 18px;
   /* overflow: hidden; */
   padding: 15px 20px;
+  margin-top: 50px;
 }
 
 .about-section {
