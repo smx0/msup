@@ -2,14 +2,14 @@ import React, { useContext, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileCircleExclamation, faBook, faScroll, faVideo, faFireAlt, faCommentAlt} from '@fortawesome/free-solid-svg-icons'
 import { supabase } from '../client'
-import { brad } from '../contexts/Auth'
+import { AuthContext } from '../contexts/Auth'
 import { toast, Toaster } from 'react-hot-toast'
 
 // this is a single resource card!!! 
 export default function ResourceCard(props) {
     
     // context to check for user login 
-    const llama = useContext(brad)
+    const userInfo = useContext(AuthContext)
 
     // destructuring props data 
     const { id, from, likes, location, name, topic, type, created_at} = props.data
@@ -56,7 +56,7 @@ export default function ResourceCard(props) {
             const res = await supabase
                 .from('likedRes')
                 .select()
-                .eq('from_user', llama.user.id)
+                .eq('from_user', userInfo.user.id)
                 .eq('parent_resource', id)
                 
                 // console.log(id, res)
@@ -78,7 +78,7 @@ export default function ResourceCard(props) {
                 setBtn_likeCount(res2.data.likes)
         }
 
-        if (llama.user) {
+        if (userInfo.user) {
             getLikeStatus()
         }
         // console.log(props.trigger02,'hi')
@@ -170,7 +170,7 @@ export default function ResourceCard(props) {
                 
                 
                 {
-                    llama.user &&
+                    userInfo.user &&
                 <div className='rc-footer'>
                     <FontAwesomeIcon 
                         icon={faCommentAlt} 

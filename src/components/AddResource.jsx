@@ -4,20 +4,20 @@ import React, { useContext,useState } from 'react'
 import { toast } from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 import { supabase } from '../client'
-import { brad } from '../contexts/Auth'
+import { AuthContext } from '../contexts/Auth'
 import CourseData from './CourseData'
 
 // this page is used to add resources 
 export default function AddRes() {
   
   // has user info from context 
-  const llama = useContext(brad)
-  // console.log('@ addres, llama is',llama)
+  const userInfo = useContext(AuthContext)
+  // console.log('@ addres, userInfo is',userInfo)
   const navigate = useNavigate()
   
   const [formData, setFormData] = useState( 
     {
-      uid: llama.user.id,
+      uid: userInfo.user.id,
       resName: '',
       resCourse: '',
       resFrom: '',
@@ -122,7 +122,7 @@ export default function AddRes() {
   // console.log( ((new Date()).toISOString()).toLocaleString())
 
   return <div >
-    {llama.user ? 
+    {userInfo.user ? 
     <div>
         <div className='ar-title'>
         {/* < FontAwesomeIcon  icon={faBook}/> add a new resource  */}
@@ -192,7 +192,7 @@ export default function AddRes() {
       <input 
           type="text" 
           className='ar-form-text'
-          placeholder='topic1, topic2, ..., topicN'
+          placeholder='topic01, topic02, ...topic99'
           name='resTopics'
           value={formData.resTopics}
           onChange={handleChange}
@@ -257,7 +257,7 @@ export default function AddRes() {
       <input 
           type="text" 
           className='ar-form-text'
-          placeholder='url'
+          placeholder='http://www.example.com'
           name='resLocation'
           value={formData.resLocation}
           onChange={handleChange}

@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react'
-import { brad } from '../contexts/Auth'
+import { AuthContext } from '../contexts/Auth'
 
 export default function TestModal(props) {
 
   // has user info from context 
-  const llama = useContext(brad)
+  const userInfo = useContext(AuthContext)
 
   const { on, name, id} = props.info
   // console.log('display style is:',on )
@@ -51,7 +51,7 @@ export default function TestModal(props) {
               onClick={ () => props.setComment({
                   resourceID: id, 
                   comment: props.commentContent,
-                  userID: llama.user.id
+                  userID: userInfo.user.id
                 })}>
                 submit→</button>
 

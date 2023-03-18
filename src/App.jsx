@@ -9,7 +9,7 @@ import FloatBarBL from './components/FloatBarBL'
 import AddResource from './components/AddResource'
 import About from './components/About'
 import { Toaster } from 'react-hot-toast'
-import { Flubber } from './contexts/Auth'
+import { AuthProvider } from './contexts/Auth'
 
 // edited the app names
 // all the elements that you want to have access to 'context', should be enclosed in varname.Provider tags. 
@@ -22,7 +22,7 @@ export default function App() {
 
   return (
     <div>
-      <Flubber>
+      <AuthProvider>
       <Header />
       <FloatBarBL />
       <Toaster />
@@ -34,7 +34,7 @@ export default function App() {
         <Route path='/:id' element={<CoursePage />} />
         <Route path='/' element={<Home />} />
       </Routes>
-      </Flubber>
+      </AuthProvider>
     </div>
   )
 }

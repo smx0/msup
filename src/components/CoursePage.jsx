@@ -6,7 +6,7 @@ import TagBar from './TagBar'
 import Resources from './Resources'
 import TestModal from './TestModal'
 import toast, { Toaster } from 'react-hot-toast'
-import { brad } from '../contexts/Auth'
+import { AuthContext } from '../contexts/Auth'
 
 export default function CoursePage() {
 
@@ -16,7 +16,7 @@ export default function CoursePage() {
   const classID = parseInt(id)
 
   // for checking in login statuss
-  const llama = useContext(brad)
+  const userInfo = useContext(AuthContext)
 
   // holds topics from APi data 
   const [topicsFromApi, setTopicsFromApi] = React.useState()
@@ -148,7 +148,7 @@ export default function CoursePage() {
   // sent as prop in order to toggle comment modal visbility and use data of the card it was clicked from
   function handleCommentButtonClk(id, name) {
 
-    console.log("@CoursePage: state:", toggleCommentModalState.on, "id:", toggleCommentModalState.id)
+    // console.log("@CoursePage: state:", toggleCommentModalState.on, "id:", toggleCommentModalState.id)
     console.log("from resource #", id, name)
     setToggleCommentModalState(prev => ({ on: !prev.on, id: id, name: name }))
 
@@ -161,7 +161,7 @@ export default function CoursePage() {
   // we also decrement the given res (id)'s count value 
   async function sendLikeInfo(id, uid, curBtnValue) {
     
-    console.log(id, "is cur",curBtnValue)
+    // console.log(id, "is cur",curBtnValue)
 
     if (!curBtnValue) {
       const res = await supabase
@@ -229,7 +229,7 @@ export default function CoursePage() {
   function handleLikeBtnClick(id, btnStatus) {
     
     // user is logged in and we can toggle the button status 
-    if (llama.user) {
+    if (userInfo.user) {
       toast('good to know!', {
         style: {
           backgroundColor: '#24293666',
@@ -241,7 +241,7 @@ export default function CoursePage() {
       })
 
       // call the sendLIkeInfo btn here!! w/id, btnStatus
-      sendLikeInfo(id, llama.user.id, btnStatus)
+      sendLikeInfo(id, userInfo.user.id, btnStatus)
 
     // sends toast asking u login 
     } else (
@@ -264,14 +264,14 @@ export default function CoursePage() {
   function closeModalAndClearComment(){
     setCommentBoxState('')
     setToggleCommentModalState({ on: false, id: null, name: null })
-    console.log('new close feature')    
+    // console.log('new close feature')    
   }
 
   // sends comment to db, closes modal, and TODO reloads comp 
   // also clears comment box, so it won't have the same content when opeend again
   function setCommentAndCloseModal(obj) {
     const { resourceID, comment, userID } = obj
-    console.log("sending comment with:",resourceID, comment, userID)
+    // console.log("sending comment with:",resourceID, comment, userID)
 
     setToggleCommentModalState({ on: false, id: null, name: null })
 

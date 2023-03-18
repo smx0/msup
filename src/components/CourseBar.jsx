@@ -2,13 +2,13 @@ import React, {useContext} from "react";
 import iconfill from '../assets/starrf.png'
 import iconeempty from '../assets/starre.png'
 import { useNavigate } from 'react-router-dom'
-import { brad } from "../contexts/Auth";
+import { AuthContext } from "../contexts/Auth";
 import { supabase } from "../client";
 import bookmark from '../assets/bookmark.png'
 
 export default function CourseBar(props) {
 
-    const llama = useContext(brad)
+    const userInfo = useContext(AuthContext)
 
     let bookmarkIcon = props.favClasses.includes(props.courseID) ? iconfill : iconeempty
 
@@ -53,7 +53,7 @@ export default function CourseBar(props) {
             
 
             {
-                llama.user && 
+                userInfo.user && 
             <div className="bar--imgCont"
                  onClick={() => props.toggleCourseFav(props.id)}>
                 <img

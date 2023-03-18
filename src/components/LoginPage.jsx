@@ -6,7 +6,7 @@ import { useNavigate  } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileCircleExclamation, faBook, faScroll, faVideo, faFireAlt, faCommentAlt, faSquarePlus, faStar, faN} from '@fortawesome/free-solid-svg-icons'
 import toast from 'react-hot-toast'
-import { brad } from '../contexts/Auth'
+import { AuthContext } from '../contexts/Auth'
 import party from '../assets/partyblob.gif'
 import { ScaleLoader } from 'react-spinners'
 
@@ -17,15 +17,15 @@ const PROJECT_API_KEY = import.meta.env.VITE_MSUP_API_KEY
 const supabase = createClient(PROJECT_URL, PROJECT_API_KEY)
 
 export default function LoginPage() {
-  // can't use 'brad' dir, NEED useContext first
-  const llama = useContext(brad)
+  // can't use 'AuthContext' dir, NEED useContext first
+  const userInfo = useContext(AuthContext)
 
   const [loadingAnim, setloadingAnim] = React.useState(true)
 
   // DND, clg statements for testing user 
-  // if (llama.user) {
-    // console.log(llama.user)
-    // console.log(llama.user.id, "is signed in!")
+  // if (userInfo.user) {
+    // console.log(userInfo.user)
+    // console.log(userInfo.user.id, "is signed in!")
   // } 
 
 
@@ -64,7 +64,7 @@ export default function LoginPage() {
                       // console.log('hi',PROJECT_URL, PROJECT_API_KEY)
                       // console.log('wlv is',window.location.origin)
                       
-                      llama.setUser(value.data.user); 
+                      userInfo.setUser(value.data.user); 
                       // toast(" ran get user data", {
                         // position: 'top-center'})
 
@@ -92,7 +92,7 @@ export default function LoginPage() {
       // if we get an error we can store it here 
       const { error } = await supabase.auth.signOut()  
       console.error(error);
-      llama.setUser(null)
+      userInfo.setUser(null)
       // alert('signed out!')
       toast('goodbye!', {
         style: {
@@ -150,11 +150,12 @@ export default function LoginPage() {
         
         :
       
-      llama.user ?
+      userInfo.user ?
 
         <div className='login-loggedin'>
           <h1> nice</h1>
           <p> You are currently signed in. </p>
+          <p> Use the buttons on the lower left of the screen to navigate.</p>
           <button 
             className='login-logout-btn'
             onClick={() => signOutUser()}> 
@@ -174,7 +175,7 @@ export default function LoginPage() {
 
               // contains every authoraized provider
                 providers={['google']}
-                redirectTo= 'http://localhost:5180/login'
+                redirectTo= 'http://localhost:5174/login'
             />
           </div>
 

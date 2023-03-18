@@ -140,14 +140,14 @@ body {
 
 .aboutText-content {
   margin-left: 50px;
-  animation: .8s linear 0s 1 fadein;
+  animation:  .5s linear 0s 1 fadein;
 }
 
 .aboutText-spacer {
   height: 50px;
 }
 .warn {
-  animation: .8s linear 0s 1 fadein;
+  animation: .5s linear 0s 1 fadein;
   color: rgb(250, 117, 117);
   /* -moz-border-radius: 6px; */
   /* -webkit-border-radius: 6px; */

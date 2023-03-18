@@ -2,16 +2,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusCircle ,faHouse, faInfoCircle, faRightFromBracket, faSpinner, faBookOpen } from "@fortawesome/free-solid-svg-icons"
 import React, {useContext} from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
-import { brad } from '../contexts/Auth'
+import { AuthContext } from '../contexts/Auth'
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
 export default function FloatBarBL() {
 
     const navigate = useNavigate()
 
-    // context from brad 
-    const llama = useContext(brad)
-    // console.log(llama.user)
+    // context from AuthContext 
+    const userInfo = useContext(AuthContext)
+    // console.log(userInfo.user)
 
 
   return (
@@ -26,7 +26,7 @@ export default function FloatBarBL() {
         </div>
       
 
-        {llama.user &&
+        {userInfo.user &&
         <div className='floatbar-btn'
             onClick={ () => navigate('/addresource')}>
             <FontAwesomeIcon 
@@ -50,7 +50,7 @@ export default function FloatBarBL() {
             <FontAwesomeIcon 
             icon={faRightFromBracket}
             />
-            <span className='floatbar-tooltip'>login</span>
+            <span className='floatbar-tooltip'>{ userInfo.user ? "logout" : "login"}</span>
         </div>
 
         <div >

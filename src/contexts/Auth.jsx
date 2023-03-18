@@ -9,10 +9,10 @@ import { createContext, useState } from 'react'
 // the var will be given two things, a var.Provider and var.Consumer 
 // also, in createContext, we pass in an initial value 
 
-export const brad = createContext(null)
+export const AuthContext = createContext(null)
 
-export function Flubber(props) {
+export function AuthProvider(props) {
     
     const [ user, setUser ] = useState(null);
 
-    return ( <brad.Provider value={{user, setUser }}> {props.children}</brad.Provider> ) }
+    return ( <AuthContext.Provider value={{user, setUser }}> {props.children}</AuthContext.Provider> ) }

@@ -2,14 +2,14 @@ import React, {useContext, useEffect, useState} from 'react'
 import { supabase } from '../client'
 import CourseBar from '../components/CourseBar'
 import CourseArray from './CourseData'
-import { brad } from '../contexts/Auth'
+import { AuthContext } from '../contexts/Auth'
 import { toast, Toaster } from 'react-hot-toast'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 export default function Home() {
-  // context from brad 
-  const llama = useContext(brad)
+  // context from AuthContext 
+  const userInfo = useContext(AuthContext)
 
   // use CoursesArray to create state 
   const [courses, setCourses] = React.useState(CourseArray)
@@ -49,7 +49,7 @@ export default function Home() {
       .from('favclasses')
       // .select()
       .select('fav_classes')
-      .eq('user_id', llama.user.id)
+      .eq('user_id', userInfo.user.id)
 
       // console.log('\tresponse:', res?.data[0].fav_classes)
       // console.log("\tnow we'll set $")
@@ -59,7 +59,7 @@ export default function Home() {
     }
 
 
-    if (llama.user) {
+    if (userInfo.user) {
       getFCFromDBAndSetState()
     }
 
@@ -76,7 +76,7 @@ export default function Home() {
       .from('favclasses')
       // .select()
       .update({'fav_classes': classes})
-      .eq('user_id', llama.user.id)
+      .eq('user_id', userInfo.user.id)
       // .eq('id',13)
 
       // console.log('after update, data is',data)
@@ -160,7 +160,7 @@ export default function Home() {
         <Toaster />
         <div className='app-body' >
 
-            { llama.user && 
+            { userInfo.user && 
             <div className='app-fav'>
                 <p className='sectionName'>fav</p>
 
