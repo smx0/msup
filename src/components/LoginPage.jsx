@@ -175,7 +175,8 @@ export default function LoginPage() {
 
               // contains every authoraized provider
                 providers={['google']}
-                redirectTo= 'http://msup.vercel.app//login'
+                redirectTo= 'http://msup.vercel.app/login'
+                // redirectTo= 'http://localhost:5173'
             />
           </div>
 

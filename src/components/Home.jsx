@@ -132,6 +132,7 @@ export default function Home() {
       id={course.courseID}
       toggleCourseFav={handleCourseFavToggle}
       favClasses={favClasses}
+      style={"bar-reg"}
     />
   })
 
@@ -149,6 +150,7 @@ export default function Home() {
         id={course.courseID}
         toggleCourseFav={handleCourseFavToggle}
         favClasses={favClasses}
+        style={"bar-fav"}
       />
     })
     // console.log('cnp len',favCoursesCpn.length)
@@ -165,7 +167,7 @@ export default function Home() {
                 <p className='sectionName'>fav</p>
 
                 {favCoursesCpn.length > 0 ? 
-                 favCoursesCpn : 
+                 <div className='app-fav-bar-ctn'>{favCoursesCpn}</div> : 
                 
                 <p className='app-fave-nothing'>
                     ( •_•)σ hit the red star to the right of a class name to pin it here

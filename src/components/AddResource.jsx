@@ -56,13 +56,6 @@ export default function AddRes() {
   function handleSubmit(event) {
     event.preventDefault()
 
-    // ck to see which keys have blank values
-    // Object.keys(formData).forEach( k => {
-    //   if (!formData[k]) {
-    //     console.log(k)
-    //   } else {console.log('goood')} 
-    // }) 
-
     if (Object.keys(formData).some(k => !formData[k])) {
       toast('please fill out all fields!', {
         style: {

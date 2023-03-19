@@ -38,7 +38,7 @@ export default function CourseBar(props) {
     const resCountOpacity = totalResourceCount > 0 ? {opacity: 1} : {opacity: 0.1}
 
     return (
-        <div className="bar">
+        <div className={props.style}>
 
             <div className="bar--content" onClick={() => navigate(`/${props.courseID}`)}>
                 <p className="bar--id">{props.id}</p>
