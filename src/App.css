@@ -396,7 +396,6 @@ body {
 .app-fav {
   display: flex;
   flex-direction: column;
-  
 }
 
 .app-fave-nothing {
@@ -515,7 +514,6 @@ body {
 }
 
 .bar-reg:hover {
-  /* background-color: #2828a7; */
   background-color: #2828a7;
   cursor: pointer;
   translate: 4px -4px;
@@ -529,9 +527,10 @@ body {
   border-radius: 3px;
   background-color: #242424;
   
-  /* prev pattern */
-  background: rgb(35,47,73);
-  background: linear-gradient(90deg, rgba(231, 19, 19, 0.5) 0%, rgba(252, 0, 197, 0.486) 100%);
+  /* prev pattern */  
+  background: rgb(36,36,36);
+  background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(35,47,73,1) 100%);
+
   
   height: 50px;
   margin: 5px;
@@ -540,15 +539,15 @@ body {
   align-items: center;
   transition: 0.3s all;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
 
 .bar-fav:hover {
-  /* background-color: #2828a7; */
-  /* background-color: #2828a7; */
   cursor: pointer;
   translate: 4px -4px;
-  /* background: rgb(40,40,167); */
-  background: linear-gradient(45deg, rgba(255, 0, 0, 0.74) 0%, rgb(252, 0, 197, .5) 100%);
+  background-color: #2828a7;
+  background: rgb(40,40,167);
+  background: linear-gradient(45deg, rgba(40,40,167,1) 0%, rgba(40,155,167,1) 100%);
 }
 
 
