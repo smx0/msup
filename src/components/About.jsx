@@ -15,7 +15,7 @@ export default function About() {
         <h1><FontAwesomeIcon icon={faInfoCircle} /> about msup</h1>
         
         <div className='aboutText-content'>
-          <p> msup was created to connect MCIT online students with  <br></br> ✨<span style={mostrel} > the most relevant</span> and <FontAwesomeIcon icon={faFireAlt} color='orangered'/> <span style={peerrev}>peer approved</span> supplemental resources on challenging topics. </p>
+          <p> msup was created to connect MCIT students with  <br></br> ✨<span style={mostrel} > the most relevant</span> and <FontAwesomeIcon icon={faFireAlt} color='orangered'/> <span style={peerrev}>peer approved</span> supplemental resources on challenging topics. </p>
         </div>        
         <p className='warn'> 👿 Do not post links to specific homework problems, test questions, code repositories, etc. that violate the Academic Integrity policies.</p>
 

@@ -45,7 +45,7 @@ export default function Header() {
                         <span className="header-other">plemental resources for</span>
 
                         <span className="header-m"> m</span>
-                        <span className="header-other">cito {courseIDfromURL}</span> </p>
+                        <span className="header-other">cit {courseIDfromURL}</span> </p>
 
             }
 
