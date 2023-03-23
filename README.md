@@ -1,7 +1,7 @@
 # msup
 
 ## about
-msup was created to connect MCIT online students with the most relevant and  peer approved supplemental resources on challenging topics.
+msup was created to connect MCIT students with the most relevant and  peer approved supplemental resources on challenging topics.
 
 Do not post links to specific homework problems, test questions, code repositories, etc. that violate the Academic Integrity policies.
 
