@@ -2,6 +2,9 @@
 
 view the web app here 👉[https://msup.vercel.app/](https://msup.vercel.app)
 
+<a href="https://msup.vercel.app" target="_blank">msup.vercel.app</a>
+
+
 ## about
 msup was created to connect MCIT students with the most relevant and  peer approved supplemental resources on challenging topics.
 
