@@ -1,8 +1,6 @@
 # msup
 
-view the web app here 👉[https://msup.vercel.app/](https://msup.vercel.app)
-
-<a href="https://msup.vercel.app" target="_blank">msup.vercel.app</a>
+view the web app here 👉[msup.vercel.app](https://msup.vercel.app)
 
 
 ## about
