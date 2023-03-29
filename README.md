@@ -1,17 +1,29 @@
-![msuplogo](src/assets/msup_gimplogo_640x320.png)
+<p align="center">
+<img width="400" height="200" src="src/assets/msup_gimplogo_640x320.png">
+</p>
+  <hr/>
+  
+# link
 
-# msup
-
-view the web app here 👉[msup.vercel.app](https://msup.vercel.app)
+check out the web app here 👉[msup.vercel.app](https://msup.vercel.app)
 
 
-## about
+# about
 msup was created to connect MCIT students with the most relevant and  peer approved supplemental resources on challenging topics.
 
-Do not post links to specific homework problems, test questions, code repositories, etc. that violate the Academic Integrity policies.
+# technologies used
+- frontend: React (JavaScript)
+- backend: Supabase (PostgreSQL)
+- user authentication: OAuth
+- deployed with Vercel
 
-## get in touch
-To request that a specific resource be  deleted or  improved , send an email to 🌐msupdb0@gmail.com.
+# features 
+## realtime class search
+<p align="center">
+  <img src="src/assets/allcourses_preview.png">
+</p>
 
-If you are logged in, each resource card will display additional icons at the bottom. Click on the  icon on the lower right corner of the specific resource you are inquiring about.
-
+## filter by topic
+<p align="center">
+  <img src="src/assets/coursepage.png">
+</p>
