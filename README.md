@@ -1,3 +1,5 @@
+![msuplogo](src/assets/msup_gimplogo_640x320.png)
+
 # msup
 
 view the web app here 👉[msup.vercel.app](https://msup.vercel.app)
