@@ -1,5 +1,7 @@
 # msup
 
+view the web app here 👉[msup.vercel.app](msup.vercel.app)
+
 ## about
 msup was created to connect MCIT students with the most relevant and  peer approved supplemental resources on challenging topics.
 
